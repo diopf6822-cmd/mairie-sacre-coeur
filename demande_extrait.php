@@ -1,0 +1,3 @@
+
+<?php include '../db.php'; if($_POST){$nom=$_POST['nom'];$prenom=$_POST['prenom'];$date=$_POST['date_naissance'];$tel=$_POST['telephone']; $conn->query("INSERT INTO demandes_extrait(nom,prenom,date_naissance,telephone) VALUES('$nom','$prenom','$date','$tel')"); echo 'Demande envoyée'; } ?>
+<form method='post'>Nom:<input name='nom'><br>Prénom:<input name='prenom'><br>Date naissance:<input name='date_naissance' type='date'><br>Téléphone:<input name='telephone'><br><button>Envoyer</button></form>

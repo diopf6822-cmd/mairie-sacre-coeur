@@ -1,0 +1,3 @@
+
+<?php include '../db.php'; if($_POST){$bebe=$_POST['bebe'];$date=$_POST['date'];$parents=$_POST['parents'];$conn->query("INSERT INTO naissances(nom_bebe,date_naissance,parents) VALUES('$bebe','$date','$parents')"); echo 'Déclaration envoyée'; } ?>
+<form method='post'>Nom bébé:<input name='bebe'><br>Date:<input name='date' type='date'><br>Parents:<input name='parents'><br><button>Déclarer</button></form>
