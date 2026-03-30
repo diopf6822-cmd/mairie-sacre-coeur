@@ -1,10 +1,13 @@
 <?php
-$conn = new_mysqli('localhost', 'root', '', 'mairie');
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "mairie";
 
-if ($conn->connect_error) {
-    die('Erreur connexion : ' . $conn->connect_error);
+$conn = mysqli_connect($host, $user, $pass, $dbname);
+
+if (!$conn) {
+    die("La connexion a échoué : " . mysqli_connect_error());
 }
-{
-    exit
-}
+
 ?>
